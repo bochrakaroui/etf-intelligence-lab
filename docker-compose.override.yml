@@ -1,0 +1,6 @@
+services:
+  api:
+    environment:
+      ETF_LAB_DATABASE_PATH: /tmp/etf-intelligence-lab/etf_lab.duckdb
+    tmpfs:
+      - /tmp:size=256m,mode=1777

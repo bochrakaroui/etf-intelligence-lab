@@ -1,0 +1,1 @@
+"""Transparent data quality rules."""
