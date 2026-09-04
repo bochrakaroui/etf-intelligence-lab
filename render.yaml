@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://render.com/schema/render.yaml.json
+
+services:
+  - type: web
+    name: etf-intelligence-lab-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: ETF_LAB_DEMO_MODE
+        value: true
+      - key: ETF_LAB_CORS_ORIGINS
+        value: https://etf-intelligence-lab.vercel.app
